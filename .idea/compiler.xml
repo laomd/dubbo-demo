@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dubbo-demo" options="-proc:none" />
+      <module name="dubbo-demo-api" options="-proc:none" />
+      <module name="dubbo-demo-consumer" options="-proc:none" />
+      <module name="dubbo-demo-provider" options="-proc:none" />
+    </option>
+  </component>
+</project>
