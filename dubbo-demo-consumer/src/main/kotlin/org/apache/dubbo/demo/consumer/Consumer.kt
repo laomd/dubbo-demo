@@ -35,7 +35,7 @@ fun main(args: Array<String>) {
             val hello = demoService.sayHello("world") // call remote method
             println(hello) // get result
         } catch (throwable: Throwable) {
-            throwable.printStackTrace()
+            println(throwable.message)
         }
     }
 }

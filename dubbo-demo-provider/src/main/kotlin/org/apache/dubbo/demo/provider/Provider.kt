@@ -16,6 +16,7 @@
  */
 package org.apache.dubbo.demo.provider
 
+import org.apache.dubbo.remoting.p2p.Peer
 import org.springframework.context.support.ClassPathXmlApplicationContext
 
 /**
@@ -24,6 +25,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext
  * before running your application.
  */
 fun main(args: Array<String>) {
+    
     System.setProperty("java.net.preferIPv6Addresses", "true")
     val context = ClassPathXmlApplicationContext("META-INF/spring/dubbo-demo-provider.xml")
     context.start()
