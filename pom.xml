@@ -4,25 +4,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.apache.dubbo</groupId>
-        <artifactId>dubbo-parent</artifactId>
-        <version>2.7.0-SNAPSHOT</version>
-    </parent>
+    <groupId>com.laomd.hw1</groupId>
+    <artifactId>dubbo-ftp</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-    <artifactId>dubbo-demo</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    <description>The demo module of dubbo project</description>
+
     <properties>
         <skip_maven_deploy>true</skip_maven_deploy>
-        <kotlin.version>1.2.60</kotlin.version>
+        <kotlin.version>1.2.61</kotlin.version>
     </properties>
 
     <modules>
-        <module>dubbo-demo-api</module>
-        <module>dubbo-demo-consumer</module>
-        <module>dubbo-demo-provider</module>
+        <module>dubbo-ftp-api</module>
+        <module>dubbo-ftp-consumer</module>
+        <module>dubbo-ftp-provider</module>
     </modules>
 
     <dependencyManagement>
@@ -30,7 +27,7 @@
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-bom</artifactId>
-                <version>${project.parent.version}</version>
+                <version>2.7.0-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
