@@ -21,7 +21,9 @@
             <groupId>com.laomd.hw1</groupId>
             <artifactId>dubbo-ftp-api</artifactId>
             <version>${parent.version}</version>
+            <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-config-spring</artifactId>

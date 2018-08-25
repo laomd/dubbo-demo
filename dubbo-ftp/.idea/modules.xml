@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/dubbo-ftp-provider/dubbo-demo-provider.iml" filepath="$PROJECT_DIR$/dubbo-ftp-provider/dubbo-demo-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-ftp.iml" filepath="$PROJECT_DIR$/dubbo-ftp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-ftp-api/dubbo-ftp-api.iml" filepath="$PROJECT_DIR$/dubbo-ftp-api/dubbo-ftp-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-ftp-consumer/dubbo-ftp-consumer.iml" filepath="$PROJECT_DIR$/dubbo-ftp-consumer/dubbo-ftp-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-ftp-provider/dubbo-ftp-provider.iml" filepath="$PROJECT_DIR$/dubbo-ftp-provider/dubbo-ftp-provider.iml" />
     </modules>
   </component>
 </project>
