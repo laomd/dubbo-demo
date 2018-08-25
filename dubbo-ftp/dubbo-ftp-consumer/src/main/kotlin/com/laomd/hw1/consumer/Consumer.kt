@@ -2,6 +2,7 @@ package com.laomd.hw1.consumer
 
 import com.laomd.hw1.FTPService
 import org.springframework.context.support.ClassPathXmlApplicationContext
+import java.io.Console
 import java.io.File
 
 fun main(args: Array<String>) {
@@ -10,11 +11,14 @@ fun main(args: Array<String>) {
     context.start()
     val ftpService = context.getBean("ftpService") as FTPService // get remote service proxy
     while (true) {
+        print("ftp> (file name)")
+        val filename = readLine()!!.trim()
         try {
-            val filename = readLine()!!.trim()
             val file = File("dubbo-ftp-consumer/target/classes", filename)
             file.deleteOnExit()
-            file.writeBytes(ftpService.fetchFile(filename))
+            val (remoteAddress, bytes) = ftpService.fetchFile(filename)
+            println("fetch from $remoteAddress, size=${bytes.size} bytes")
+            file.writeBytes(bytes)
         } catch (throwable: Throwable) {
             println(throwable.message)
         }

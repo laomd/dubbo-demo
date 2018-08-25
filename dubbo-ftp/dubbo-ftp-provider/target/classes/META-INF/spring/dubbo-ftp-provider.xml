@@ -12,10 +12,12 @@
     <dubbo:registry address="multicast://224.5.6.7:1234"/>
 
     <!-- use dubbo protocol to export service on port 20880 -->
-    <dubbo:protocol name="dubbo" port="20880"/>
+    <dubbo:protocol name="dubbo" port="12346"/>
 
     <!-- service implementation, as same as regular local bean -->
-    <bean id="ftpService" class="com.laomd.hw1.provider.FTPServiceImp"/>
+    <bean id="ftpService" class="com.laomd.hw1.provider.FTPServiceImp">
+        <constructor-arg value="provider1-dir"/>
+    </bean>
 
     <!-- declare the service interface to be exported -->
     <dubbo:service interface="com.laomd.hw1.FTPService" ref="ftpService"/>

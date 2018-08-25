@@ -6,5 +6,6 @@ fun main(args: Array<String>) {
     System.setProperty("java.net.preferIPv6Addresses", "true")
     val context = ClassPathXmlApplicationContext("META-INF/spring/dubbo-ftp-provider.xml")
     context.start()
-    readLine() // press any key to exit
+    println("press any key to exit")
+    readLine() //
 }

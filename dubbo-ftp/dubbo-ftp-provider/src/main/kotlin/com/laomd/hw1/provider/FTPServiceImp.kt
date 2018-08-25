@@ -7,12 +7,14 @@ import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
 
-class FTPServiceImp : FTPService {
+class FTPServiceImp(
+        private val workdir: String) : FTPService {
 
-    override fun fetchFile(name: String): ByteArray {
+    override fun fetchFile(name: String): Pair<String, ByteArray> {
         println("[ ${SimpleDateFormat("HH:mm:ss").format(Date())} ] " +
                 "$name, request from consumer: ${RpcContext.getContext().remoteAddress}")
-        return File("dubbo-ftp-provider/target/classes", name).readBytes()
+        return Pair(RpcContext.getContext().localAddressString,
+                File(workdir, name).readBytes())
     }
 
 }
